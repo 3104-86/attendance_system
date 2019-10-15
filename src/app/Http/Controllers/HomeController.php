@@ -25,4 +25,15 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    /**
+     * 日時の取得
+     */
+    public function getDateAttribute()
+    {
+        $carbon = new Carbon($this->create_at);
+        $date = $carbon->isoFormat('YYYY年MM月DD日 LTS (ddd)');
+
+        return $date;
+    }
 }

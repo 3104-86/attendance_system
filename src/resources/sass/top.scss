@@ -1,0 +1,12 @@
+.loginPage {
+    &_contents {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      &_title {
+        margin-top: 12vh;
+      }
+    }
+  }
