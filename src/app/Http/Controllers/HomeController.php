@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;  
 
 class HomeController extends Controller
 {
     /**
-     * Create a new controller instance.
+     * ログインしていない場合はログインページへ移動
      *
      * @return void
      */
@@ -23,11 +25,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // ログインユーザを取得する
+        $user = \Auth::user();
+        return view('home', ['user' => $user]);
+
     }
 
     /**
      * 日時の取得
+     * 
+     * @return date
      */
     public function getDateAttribute()
     {
