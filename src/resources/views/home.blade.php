@@ -9,11 +9,24 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">勤怠</div>
-
-                <div class="card-body">
-                    <button disabled="disabled">出勤</button>
-                    <button disabled="disabled">退勤</button>
-                </div>
+            </div>
+            <div class="button-form">
+                <ul>
+                    <li>
+                        <form action="#!" method="POST">
+                            @csrf
+                            @method('POST')
+                            <button type="submit" class="btn btn-primary ">出勤</button>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="#!" method="POST">
+                            @csrf
+                            @method('POST')
+                            <button type="submit" class="btn btn-success">退勤</button>
+                        </form>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
