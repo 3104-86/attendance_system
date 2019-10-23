@@ -42,9 +42,9 @@ class User extends Authenticatable
      * 出退勤に関連するレコードを取得
      * 
      */
-    public function timestamp()
+    public function timestamps()
     {
-        return $this->hasMany('App\Timestamp');
+        return $this->hasMany('App/Timestamp');
     }
     
 }

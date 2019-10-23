@@ -12,7 +12,7 @@
                 <div class="button-form">
                     <ul class="list-unstyled">
                         <li>
-                            <form action="#!" method="POST">
+                            <form action="/punchin" method="POST">
                                 @csrf
                                 @method('POST')
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">出勤</button>
